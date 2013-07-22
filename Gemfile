@@ -8,6 +8,9 @@ gem 'rails-api'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'ember-rails'
+gem 'ember-source', '1.0.0.rc6.2'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
