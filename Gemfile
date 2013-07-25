@@ -1,12 +1,15 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4.0.0'
 
 gem 'rails-api'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+gem 'jquery-rails'
+gem 'twitter-bootstrap-rails'
 
 gem 'ember-rails'
 gem 'ember-source', '1.0.0.rc6.2'
