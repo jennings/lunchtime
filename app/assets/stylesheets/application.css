@@ -5,3 +5,8 @@
  *= require_self
  *= require_tree .
 */
+
+.inactive {
+    color: #999;
+    text-decoration: line-through;
+}

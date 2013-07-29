@@ -1,5 +1,5 @@
 // For more information see: http://emberjs.com/guides/routing/
 
 Lunchtime.Router.map(function() {
-  // this.resource('posts');
+    this.resource('lunches', { path: '/' });
 });
