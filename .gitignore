@@ -6,6 +6,7 @@ capybara-*.html
 .rspec
 /.bundle
 /vendor/bundle
+/public/assets
 
 # Ignore the default SQLite database.
 /log/*

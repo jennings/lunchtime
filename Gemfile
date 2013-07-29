@@ -11,6 +11,18 @@ gem 'twitter-bootstrap-rails'
 gem 'ember-rails'
 gem 'ember-source', '1.0.0.rc6.2'
 
+group :assets do
+  gem 'uglifier'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -23,11 +35,3 @@ gem 'ember-source', '1.0.0.rc6.2'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
-group :production do
-  gem 'pg'
-end
-
-group :development, :test do
-  gem 'sqlite3'
-end
