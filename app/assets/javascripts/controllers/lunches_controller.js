@@ -1,4 +1,5 @@
 Lunchtime.LunchesController = Ember.ArrayController.extend({
+
     createLunch: function () {
         var name = this.get('newName');
         if (!name.trim()) return;
@@ -9,4 +10,5 @@ Lunchtime.LunchesController = Ember.ArrayController.extend({
         this.set('newName', '');
         lunch.save();
     }
+
 });

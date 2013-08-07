@@ -5,4 +5,6 @@
 //= require_self
 //= require lunchtime
 
-Lunchtime = Ember.Application.create();
+Lunchtime = Ember.Application.create({
+    LOG_TRANSITIONS: true
+});

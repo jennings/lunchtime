@@ -1,0 +1,13 @@
+<ul>
+    {{#each lunch in lunches}}
+    <li>
+        <label {{action "editLunch" on="doubleClick"}} {{bindAttr class="active::inactive"}}>{{name}}</label>
+    </li>
+    {{/each}}
+</ul>
+
+<div class="input-append">
+    {{view Ember.TextField id="new-lunch" placeholder="New lunch"
+            valueBinding="newName" action="createLunch"}}
+    <button class="btn" {{action "createLunch"}}>Add</button>
+</div>

@@ -1,0 +1,13 @@
+<a {{action "editLunch" on="click"}}>edit</a>
+
+<div>
+    {{#if isEditing}}
+    {{view Lunchtime.EditLunchView valueBinding="name"}}
+    {{else}}
+    <label>{{name}}</label>
+    {{/if}}
+</div>
+
+<div>
+    {{view Ember.Checkbox checkedBinding="active" class="toggle"}} Active
+</div>

@@ -5,47 +5,30 @@
         <%= stylesheet_link_tag "application" %>
     </head>
     <body>
-        <script type="text/x-handlebars" data-template-name="lunches">
+        <script type="text/x-handlebars">
             <div class="navbar">
                 <div class="navbar-inner">
                     <a href="" class="brand">Lunchtime</a>
                     <ul class="nav">
-                        <li class="active"><a href="">Lunches</a></li>
-                        <li><a href="#/companies/">Companies</a></li>
+                        {{#linkTo 'lunch.index' tagName='li'}}
+                        <a {{bindAttr href="view.href"}}>Lunches</a>
+                        {{/linkTo}}
+                        {{#linkTo 'companies' tagName='li'}}
+                        <a {{bindAttr href="view.href"}}>Companies</a>
+                        {{/linkTo}}
+                        {{#linkTo 'signin' tagName='li'}}
+                        <a {{bindAttr href="view.href"}}>Sign In</a>
+                        {{/linkTo}}
                     </ul>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="span2">
-                        what
+                        {{outlet sidebar}}
                     </div>
                     <div class="span10">
-                        <table>
-                            <tr>
-                                <th>Active</th>
-                                <th>Name</th>
-                            </tr>
-                            {{#each controller itemController="lunch"}}
-                            <tr>
-                                <td>
-                                    {{view Ember.Checkbox checkedBinding="active" class="toggle"}}
-                                </td>
-                                <td>
-                                    {{#if isEditing}}
-                                    {{view Lunchtime.EditLunchView valueBinding="name"}}
-                                    {{else}}
-                                    <label {{action "editLunch" on="doubleClick"}} {{bindAttr class="active::inactive"}}>{{name}}</label>
-                                    {{/if}}
-                                </td>
-                            </tr>
-                            {{/each}}
-                        </table>
-                        <div class="input-append">
-                            {{view Ember.TextField id="new-lunch" placeholder="New lunch"
-                                    valueBinding="newName" action="createLunch"}}
-                            <button class="btn" {{action "createLunch"}}>Add</button>
-                        </div>
+                        {{outlet}}
                     </div>
                 </div>
             </div>

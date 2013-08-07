@@ -1,4 +1,5 @@
 Lunchtime.LunchController = Ember.ObjectController.extend({
+
     isEditing: false,
 
     editLunch: function () {
@@ -9,4 +10,5 @@ Lunchtime.LunchController = Ember.ObjectController.extend({
         this.set('isEditing', false);
         this.get('model').save();
     }
+
 });
